@@ -40,8 +40,10 @@ article{
 }
 
 #PageNav{
-    margin-top: -4%;
+    margin-top: 0%;
     float: left;
+    top: 0;
+    position: fixed;
 }
 
 #TimeList {

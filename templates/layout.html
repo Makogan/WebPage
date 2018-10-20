@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
+    {% include  "navigation-menu.html"%}
+    
     <head>
         {% block css %}{% endblock %}
     </head>
 
     <body>
-        {% block body_content %}{% endblock %}
-        {% block scripts %}{% endblock %}
+        <section id="VolatileSection">
+            {% block body_content %}{% endblock %}
+            {% block scripts %}{% endblock %}
+        </section>
     </body>
 </html>

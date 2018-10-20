@@ -1,3 +1,5 @@
+window.onload = setWelcome();
+
 function setWelcome() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -13,6 +15,18 @@ function setWelcome() {
     };
     xhttp.open("GET", "static/welcome.txt", true);
     xhttp.send();
+}
+
+function clearSection() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("VolatileSection").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "templates/resume.html", true);
+  xhttp.send();
 }
 
 function setResume() {
