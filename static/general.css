@@ -1,9 +1,8 @@
 body {
-    background: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url("images/graph.jpg");
     background-repeat: no-repeat;
-    background-color: black;
+    background-color: black; 
     background-attachment: fixed;
     background-position: center;
 
@@ -85,7 +84,7 @@ button::-moz-focus-inner {
 }
 
 #TimeList li button {
-    color:#fff;
+    color: var(--text_color);
     font-size: 110%;
     outline: 0;
     width:100px;

@@ -1,23 +1,22 @@
-{% include  "navigation-menu.html"%}
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="static/general.css">
-        <title>Camilo Talero</title>
-    </head>
+{% extends "layout.html" %}
 
-    <body>
-        <section>
-            <h1 class="TopHeader">Camilo Talero</h1>
+{% block css %}
+<link rel="stylesheet" type="text/css" href="static/general.css">
+<title>Camilo Talero</title>
+{% endblock %}
 
-            <article>
-                <h1>About Myself</h1>
-                <p id="MainText">
-                    <script>setWelcome()</script>
-                </p>
-            </article>
-        </section>
-    </body>
+{% block body_content %}{% endblock %}
+<section>
+    <h1 class="TopHeader">Camilo Talero</h1>
 
-    <script src="static/scripts/page_change.js"></script>
-</html>
+    <article>
+        <h1>About Myself</h1>
+        <p id="MainText">
+            <script>setWelcome()</script>
+        </p>
+    </article>
+</section>
+
+{% block scripts %}
+<script src="static/scripts/page_change.js"></script>
+{% endblock %}
