@@ -20,15 +20,19 @@ function setResume() {
 
   more_info.append(
     $('<a target="_blank" href="https://github.com/Makogan">\
-      <img src="static/images/GitHub-Mark.png" alt="github">\
+      <img src="static/images/GitHub-Mark.png" width="64px" height="64px" alt="github">\
       </a>'));
   more_info.append(
     $('<a target="_blank" href="https://gitlab.com/Makogan">\
-      <img src="static/images/gitlab_logo.png" alt="github" width="120px" height="120px">\
+      <img src="static/images/gitlab_logo.png" alt="github" width="64px" height="64px">\
       </a>'));
   more_info.append(
     $('<a target="_blank" href="https://www.linkedin.com/in/camilo-talero-3906a9167/">\
-      <img src="static/images/linkedin_logo.png" alt="github" width="120px" height="120px">\
+      <img src="static/images/linkedin_logo.png" alt="github" width="64px" height="64px">\
+      </a>'));
+  more_info.append(
+    $('<a target="_blank" href="https://www.linkedin.com/in/camilo-talero-3906a9167/">\
+      <img src="static/images/mail.png" alt="github" width="64px" height="64px">\
       </a>'));
 
 
