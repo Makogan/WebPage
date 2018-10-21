@@ -2,15 +2,16 @@
 <html>
     {% include  "navigation-menu.html"%}
 
-    <head>
-        <script src="jquery-3.3.1.min.js"></script>
+    <div id="VolatileSection">
+    <head id="Title">
         {% block css %}{% endblock %}
     </head>
 
     <body>
-        <section id="VolatileSection">
+        <section>
             {% block body_content %}{% endblock %}
             {% block scripts %}{% endblock %}
         </section>
     </body>
+    </div>
 </html>

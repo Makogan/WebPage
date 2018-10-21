@@ -8,4 +8,6 @@ app.static_folder = 'static'
 def home():
     return render_template("home.html")
 
-
+@app.route("/resume")
+def resume():
+    return render_template("resume.html")
