@@ -12,6 +12,18 @@ body {
     --border_color: rgba(25, 129, 190, 1);
 }
 
+a::-moz-focus-inner {
+    border: 0;
+}
+
+a:focus {
+    outline:0;
+}
+
+a {
+    text-decoration: none;
+}
+
 .TopHeader {
     margin-top: 5%;
     background-color: var(--text_background_color);

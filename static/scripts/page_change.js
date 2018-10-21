@@ -12,10 +12,26 @@ function setWelcome() {
 function setResume() {
   setElementToFile("MainText", "static/resume.txt");
 
-  //$('head').append('<link rel="stylesheet" type="text/css" href="static/resume.css"/>');
+  $('head').append('<link rel="stylesheet" type="text/css" href="static/resume.css"/>');
   $("article").empty()
   $(".TopHeader").css("margin-left", "10%");
-  var more_info = $('<h2 class="TopHeader" id="SecondHead">hallo</h2>');
+
+  var more_info = $('<div class="TopHeader"></div> id="SecondHead"');
+
+  more_info.append(
+    $('<a target="_blank" href="https://github.com/Makogan">\
+      <img src="static/images/GitHub-Mark.png" alt="github">\
+      </a>'));
+  more_info.append(
+    $('<a target="_blank" href="https://gitlab.com/Makogan">\
+      <img src="static/images/gitlab_logo.png" alt="github" width="120px" height="120px">\
+      </a>'));
+  more_info.append(
+    $('<a target="_blank" href="https://www.linkedin.com/in/camilo-talero-3906a9167/">\
+      <img src="static/images/linkedin_logo.png" alt="github" width="120px" height="120px">\
+      </a>'));
+
+
   $(".TopHeader").after(more_info);
 
   clearButtons();
