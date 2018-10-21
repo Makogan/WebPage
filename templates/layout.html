@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-    {% include  "navigation-menu.html"%}
 
-    <div id="VolatileSection">
     <head id="Title">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
         {% block css %}{% endblock %}
     </head>
 
+    {% include  "navigation-menu.html"%}
     <body>
-        <section>
+        <section id="VolatileSection">
             {% block body_content %}{% endblock %}
             {% block scripts %}{% endblock %}
         </section>
     </body>
-    </div>
 </html>

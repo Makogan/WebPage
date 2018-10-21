@@ -1,7 +1,7 @@
 window.onload = setWelcome();
 
 function setWelcome() {
-    setElementToHTML("MainText", "static/welcome.txt");
+    setElementToFile("MainText", "static/welcome.txt");
 
     clearButtons();
 
@@ -10,8 +10,13 @@ function setWelcome() {
 }
 
 function setResume() {
-  setElementToHTML("VolatileSection", "/resume");
-  setElementToHTML("MainText", "static/resume.html");
+  setElementToFile("MainText", "static/resume.txt");
+
+  //$('head').append('<link rel="stylesheet" type="text/css" href="static/resume.css"/>');
+  $("article").empty()
+  $(".TopHeader").css("margin-left", "10%");
+  var more_info = $('<h2 class="TopHeader" id="SecondHead">hallo</h2>');
+  $(".TopHeader").after(more_info);
 
   clearButtons();
 
@@ -24,11 +29,12 @@ function clearButtons()
   var x = document.getElementsByTagName("button");
   var i;
   for (i = 0; i < x.length; i++) {
-      x[i].style.backgroundColor = " rgba(0,0,0,0.6)";
+      var color = getComputedStyle(document.body).getPropertyValue('--button_background_color');
+      x[i].style.backgroundColor = color;
   }
 }
 
-function setElementToHTML(elementID, file)
+function setElementToFile(elementID, file)
 {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
