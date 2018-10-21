@@ -1,13 +1,16 @@
 * {
     box-sizing: border-box;
 }
-
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 [class*="col-"] {
     float: left;
     padding: 15px;
     border: 1px solid red;
 }
-
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -20,44 +23,16 @@
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url("images/graph.jpg");
-    background-repeat: no-repeat;
-    background-color: black; 
-    background-attachment: fixed;
-    background-position: center;
-
     --text_color: white;
     --button_background_color: rgba(0,0,0,0.6);
     --text_background_color: rgba(0,170,225,0.7);
     --border_color: rgba(25, 129, 190, 1);
-}
-
-a::-moz-focus-inner {
-    border: 0;
-}
-
-a:focus {
-    outline:0;
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
-    outline: 0;
-    display:inline-block;
-    border-radius:100%;
-    background-color: rgba(0,0,0,0.0);
-    border-color: rgba(0,0,0,0.0);
-    border-width: 0px;
-}
-
-button::-moz-focus-inner {
-    border: 0;
 }
 
 .TopHeader {
@@ -66,27 +41,24 @@ button::-moz-focus-inner {
     font-size: 350%;
     text-align: center;
     border-radius: 50px;
+    display: inline;
 }
 
-article{
-    margin-top: 5%;
-    background-color: var(--text_background_color);
-    color: var(--text_color);
-    font-size: 120%;
-    word-wrap: normal;
-    padding-top: 0.3%;
-    padding-bottom: 0.3%;
-    padding-left: 2%;
-    border-radius: 50px;
-    width: 80%;
-    margin-left: 10%;
+#FirstHead {
+    width: 50%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: calc((100% - 50%) / 2);
 }
 
-#TimeList {
+.menu ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-
-#TimeList li {
+.menu li {
     text-align: center;
     line-height: 10px;
     border-radius: 10px;
@@ -95,27 +67,7 @@ article{
     position: relative;
 }
 
-#TimeList li::before{
-    content: '';
-    position: absolute;
-    left: calc(50% - 2px);
-    top: -10px;
-    width: 3px;
-    height: 10px;
-    background: var(--border_color);
-    z-index: -1;
-}
-
-#TimeList li:first-child::before {
-    display: none;
-  }
-
-
-#TimeList li button:active {
-    background-color: var(--border_color);
-}
-
-#TimeList li button {
+.menu li button {
     color: var(--text_color);
     font-size: 110%;
     outline: 0;
@@ -131,9 +83,28 @@ article{
     border-width: 2px;
 }
 
-a span {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
+
+.menu li:first-child::before {
+    display: none;
+}
+
+
+.menu li::before{
+    content: '';
+    position: absolute;
+    left: calc(50% - 2px);
+    top: -10px;
+    width: 3px;
+    height: 10px;
+    background: var(--border_color);
+    z-index: -1;
+}
+
+
+.menu li button:hover {
+    background-color: var(--text_background_color);
+}
+
+button::-moz-focus-inner {
+    border: 0;
 }
