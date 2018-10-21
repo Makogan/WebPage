@@ -1,13 +1,17 @@
-.TopHeader {
-    height: 90px;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 42%;
+
+article {
+    margin-top: 0.1%;
 }
 
 #FirstHead {
-    width: 55%;
+    width: 8em;
+    margin-left: 0%;
+    margin-left: -2.5%;
+    padding-top: 32px;
+}
+
+#msg {
+    position: absolute;
 }
 
 #SecondHead {
@@ -15,15 +19,72 @@
     background-color: var(--text_background_color);
     flex: 1;
     border: 0;
-    height: 400px;
     padding-top: 30px;
-    padding-right: 1%;
-    padding-left: 1%;
-    display: block;
+    margin-left: 12em;
+    width: 4em;
 }
 
 #Headers {
     margin-top: -2%;
     display: flex;
-    width: 90%;
+
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    padding-left: 2%;
+    border-radius: 50px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+ /* Popup container */
+ .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgba(10,10,10,1);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }

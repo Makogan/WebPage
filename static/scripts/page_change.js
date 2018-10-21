@@ -1,6 +1,11 @@
 window.onload = setWelcome();
 
 function setWelcome() {
+
+    $('link').remove();
+    $('head').append('<link rel="stylesheet" type="text/css" href="static/general.css"/>');
+    $('h1').not('#FirstHead').remove();
+
     setElementToFile("MainText", "static/welcome.txt");
 
     clearButtons();
@@ -10,33 +15,20 @@ function setWelcome() {
 }
 
 function setResume() {
-  setElementToFile("MainText", "static/resume.txt");
 
-  $('head').append('<link rel="stylesheet" type="text/css" href="static/resume.css"/>');
-  $("article").empty()
-  $(".TopHeader").css("margin-left", "10%");
+  $('resumeCSS').remove();
+  $('head').append(
+    '<link rel="stylesheet" type="text/css" href="static/resume.css" id="resumeCSS"/>');
 
-  var more_info = $('<div class="TopHeader"></div> id="SecondHead"');
-
-  more_info.append(
-    $('<a target="_blank" href="https://github.com/Makogan">\
-      <img src="static/images/GitHub-Mark.png" width="64px" height="64px" alt="github">\
-      </a>'));
-  more_info.append(
-    $('<a target="_blank" href="https://gitlab.com/Makogan">\
-      <img src="static/images/gitlab_logo.png" alt="github" width="64px" height="64px">\
-      </a>'));
-  more_info.append(
-    $('<a target="_blank" href="https://www.linkedin.com/in/camilo-talero-3906a9167/">\
-      <img src="static/images/linkedin_logo.png" alt="github" width="64px" height="64px">\
-      </a>'));
-  more_info.append(
-    $('<a target="_blank" href="https://www.linkedin.com/in/camilo-talero-3906a9167/">\
-      <img src="static/images/mail.png" alt="github" width="64px" height="64px">\
-      </a>'));
-
-
-  $(".TopHeader").after(more_info);
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      $('#VolatileSection').empty();
+      $('#VolatileSection').append(this.responseText);
+    }
+  };
+  xhttp.open("GET", "/resume", true);
+  xhttp.send();
 
   clearButtons();
 
@@ -65,4 +57,15 @@ function setElementToFile(elementID, file)
   };
   xhttp.open("GET", file, true);
   xhttp.send();
+}
+
+function openPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.add("show");
+}
+
+function closePopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.remove("show");
+  $("#myPopup").classList.remove("show");
 }

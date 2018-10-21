@@ -8,8 +8,10 @@
 
     {% include  "navigation-menu.html"%}
     <body>
-        <section id="VolatileSection">
+        <section>
+            <div id="VolatileSection">
             {% block body_content %}{% endblock %}
+            </div>
             {% block scripts %}{% endblock %}
         </section>
     </body>

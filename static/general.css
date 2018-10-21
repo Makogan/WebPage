@@ -24,11 +24,24 @@ a {
     text-decoration: none;
 }
 
+button {
+    outline: 0;
+    display:inline-block;
+    border-radius:100%;
+    background-color: rgba(0,0,0,0.0);
+    border-color: rgba(0,0,0,0.0);
+    border-width: 0px;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
 .TopHeader {
     margin-top: 5%;
     background-color: var(--text_background_color);
     color: var(--text_color);
-    font-size: 400%;
+    font-size: 350%;
     text-align: center;
     border-radius: 50px;
     padding-top: 0.9%;
@@ -93,18 +106,14 @@ article{
     background-color: var(--border_color);
 }
 
-button::-moz-focus-inner {
-    border: 0;
-}
-
 #TimeList li button {
     color: var(--text_color);
     font-size: 110%;
     outline: 0;
     width:100px;
     height:100px;
-    display:inline-block; 
-    text-align:center; 
+    display:inline-block;
+    text-align:center;
     position:relative;
     border-radius:100%;
     background-color: var(--button_background_color);
