@@ -8,3 +8,4 @@ app.static_folder = 'static'
 def home():
     return render_template("home.html")
 
+

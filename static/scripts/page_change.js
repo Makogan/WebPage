@@ -17,23 +17,11 @@ function setWelcome() {
     xhttp.send();
 }
 
-function clearSection() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("VolatileSection").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "templates/resume.html", true);
-  xhttp.send();
-}
-
 function setResume() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("MainText").innerHTML =
+      document.getElementById("VolatileSection").innerHTML =
       this.responseText;
 
       clearButtons();
@@ -42,7 +30,7 @@ function setResume() {
         "rgba(25, 129, 190, 0.7)";
     }
   };
-  xhttp.open("GET", "static/resume.txt", true);
+  xhttp.open("GET", "static/resume.html", true);
   xhttp.send();
 }
 
