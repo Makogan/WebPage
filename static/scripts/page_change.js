@@ -15,8 +15,6 @@ function setWelcome() {
 }
 
 function setResume() {
-
-  window/alert("adsa");
   $('resumeCSS').remove();
   $('head').append(
     '<link rel="stylesheet" type="text/css" href="static/resume.css" id="resumeCSS"/>');

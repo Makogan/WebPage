@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="static/general.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="static/general.css"/>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -10,16 +11,17 @@
 <div class="row">
 
 	{% include  "navigation-menu.html"%}
-	<div class="col-10" id="Headers">
-		<h1 id="FirstHead" class="TopHeader">Chania</h1>
-	</div>
+	<section id="VolatileSection">
+		<div class="col-10" id="Headers">
+			<h1 id="FirstHead" class="TopHeader">Chania</h1>
+		</div>
 
-	<div class="col-10" id="VolatileSection">
-		<h1>The City</h1>
-		<p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
-		<p>Resize the browser window to see how the content respond to the resizing.</p>
-	</div>
-
+		<article class="col-10">
+			<h2>The City</h2>
+			<p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+			<p>Resize the browser window to see how the content respond to the resizing.</p>
+		</article>
+	</section>
 </div>
 
 <script src="static/scripts/page_change.js"></script>
