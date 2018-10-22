@@ -6,12 +6,23 @@ function setWelcome() {
     $('head').append('<link rel="stylesheet" type="text/css" href="static/general.css"/>');
     $('h1').not('#FirstHead').remove();
 
-    setElementToFile("MainText", "static/welcome.txt");
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        $('#VolatileSection').empty();
+        $('#VolatileSection').append(this.responseText);
+      }
+    };
+    xhttp.open("GET", "/home", true);
+    xhttp.send();
 
     clearButtons();
 
     document.getElementById("welcome_button").style.backgroundColor =
       "rgba(25, 129, 190, 0.7)";
+
+
+    setElementToFile("MainText", "static/welcome.txt");
 }
 
 function setResume() {

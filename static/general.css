@@ -9,7 +9,7 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -55,6 +55,18 @@ body {
     padding-top: 1%;
     padding-bottom: 1%;
     margin-left: calc((100% - 50%) / 2);
+}
+
+.FText {
+    background-color: var(--text_background_color);
+    color: var(--text_color);
+    border-radius: 50px;
+}
+#MainText {
+    background-color: var(--text_background_color);
+    color: var(--text_color);
+    border-radius: 50px;
+    display: inline;
 }
 
 .menu ul {

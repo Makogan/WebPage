@@ -1,20 +1,43 @@
-#FirstHead {
-    width: 10em;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-left: 0;
-    float: left;
+#Avatar {
+    border-radius: 50%;
+    max-width: 400px;
 }
 
-#SecondHead {
-    width: 6em;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    float: right;
+#Name {
+    font-size: 80px;
+    vertical-align: top;
+}
+
+#ButtonContainer {
+    display: flex;
+    flex-direction: row;
+    color: var(--text_color);
+    align-items: center;
+}
+
+.p {
+    background-color: var(--text_background_color);
+    color: var(--text_color);
+    border-radius: 50px;
+}
+
+.ResHead {
+    font-size: 220%;
+    font-weight: 1000;
+}
+.FText {
+    padding: 1%;
+    background-color: rgba(30,30,30,0.9);
+    border-radius: 0;
+}
+
+.bLink img {
+    max-width: 60px;
+    height: auto;
+}
+
+.bLink:hover {
+    transform: scale(1.10);
 }
 
 .closeButton {
@@ -43,8 +66,9 @@
     z-index: 1;
     top: 125%;
     left: -400%;
-    margin-left: -185px;
+    margin-left: -85px;
     width: 22em;
+
 }
 
 /* Popup arrow */
@@ -75,4 +99,11 @@
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+}
+
+.bLink {
+    padding-left: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
 }
