@@ -28,15 +28,16 @@ html {
 }
 
 body {
-    background-image: url("images/graph.jpg");
-    background-repeat: no-repeat;
+    background-image: url("images/tree.jpg");
     background-color: black;
-    background-size: cover;
+    background-size: 1920px 1200px;
+    background-attachment: fixed;
+    overflow: visible;
 
     --text_color: white;
     --button_background_color: rgba(0,0,0,0.6);
-    --text_background_color: rgba(0,170,225,0.7);
-    --border_color: rgba(25, 129, 190, 1);
+    --text_background_color: rgba(255, 174, 0, 0.7);
+    --border_color: rgb(255, 174, 0);
 }
 
 .TopHeader {
@@ -69,6 +70,11 @@ body {
     display: inline;
 }
 
+.fixed {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+}
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -79,7 +85,6 @@ body {
     line-height: 10px;
     border-radius: 10px;
     margin-top: 10px;
-    color: var(--text_color);
     position: relative;
 }
 
@@ -89,8 +94,17 @@ button {
     background: none;
 }
 
+.NavButton {
+    background-color: var(--button_background_color);
+    color: var(--border_color);
+}
+
+.NavButtonS {
+    background-color: var(--text_background_color);
+    color: var(black);
+}
+
 .menu li button {
-    color: var(--text_color);
     font-size: 110%;
     width:100px;
     height:100px;
@@ -98,7 +112,6 @@ button {
     text-align:center;
     position:relative;
     border-radius:100%;
-    background-color: var(--button_background_color);
     border-color: var(--border_color);
     border-style: solid;
     border-width: 2px;
@@ -121,6 +134,11 @@ button {
     z-index: -1;
 }
 
+.FText {
+    padding: 1%;
+    background-color: rgba(30,30,30,0.9);
+    border-radius: 0;
+}
 
 .menu li button:hover {
     background-color: var(--text_background_color);

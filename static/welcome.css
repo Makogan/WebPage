@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Amethyst;
+    src: url("fonts/Amethyst.ttf");
+}
+
+#greeter {
+    font-size: 80px;
+    letter-spacing: 10px;
+    word-spacing: 30px;
+    font-family: Amethyst;
+    margin-top: 3%;
+    padding-top: 5%;
+    margin-left: 10%;
+    position: absolute;
+    text-align: center;
+    padding-bottom: 5%;
+}
