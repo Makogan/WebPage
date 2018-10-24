@@ -4,14 +4,26 @@
 }
 
 #greeter {
-    font-size: 80px;
-    letter-spacing: 10px;
+    font-size: 75px;
+    letter-spacing: -10px;
     word-spacing: 30px;
     font-family: Amethyst;
-    margin-top: 3%;
-    padding-top: 5%;
-    margin-left: 10%;
-    position: absolute;
+    margin-left: 5%;
+    margin-right: 5%;
     text-align: center;
     padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.pDisplay {
+    border-radius: 1000px;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border: 2px;
+    border-width: 2px;
+    border-color:rgba(255, 174, 0, 0.4);
+    border-style: solid;
+    margin-left: 3%;
+    margin-right: 3%;
 }

@@ -1,4 +1,0 @@
-I am a computer scientist passionate about Graphics. They are my big
-love and obsession. I try to work on them as much as possible and I am
-interested in cool research related to real time particle simulations
-and real time rendering.

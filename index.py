@@ -17,10 +17,10 @@ def resume():
 def home():
     return render_template("home.html")
 
+@app.route("/projects")
+def projects():
+    return render_template("projects.html")
+
 @app.route("/uploads/resume")
 def download_resume():
     return send_file("static/documents/resume.pdf")
-
-@app.route("/assets/sofia.otf")
-def getFont():
-    return send_file("static/fonts/Sofia_Handwritten.otf")

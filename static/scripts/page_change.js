@@ -1,13 +1,19 @@
 window.onload = setWelcome();
 
 function setWelcome() {
+  changeToPage("/home", "welcome_button");
+}
 
-    $('link').remove();
-    $('head').append('<link rel="stylesheet" type="text/css" href="static/general.css"/>');
-    $('head').append('<link rel="stylesheet" type="text/css" href="static/welcome.css"/>');
-    $('h1').not('#FirstHead').remove();
+function setResume() {
+  changeToPage("/resume", "resume_button");
+}
 
-    var xhttp = new XMLHttpRequest();
+function setProjects() {
+  changeToPage("/projects", "projects_button");
+}
+
+function changeToPage(page, button) {
+  var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         $('#VolatileSection').empty();
@@ -15,12 +21,10 @@ function setWelcome() {
 
         clearButtons();
 
-        setButton('welcome_button');
-
-        setElementToFile("MainText", "static/welcome.txt");
+        setButton(button);
       }
     };
-    xhttp.open("GET", "/home", true);
+    xhttp.open("GET", page, true);
     xhttp.send();
 }
 
@@ -28,29 +32,6 @@ function setButton(id) {
   var button = document.getElementById(id);
   button.classList.remove('NavButton');
   button.classList.add('NavButtonS');
-}
-
-function setResume() {
-  $('resumeCSS').remove();
-  $('link').remove();
-  $('head').append('<link rel="stylesheet" type="text/css" href="static/general.css"/>');
-  $('head').append('<link rel="stylesheet" type="text/css" href="static/resume.css" id="resumeCSS"/>');
-
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      $('#VolatileSection').empty();
-      $('#VolatileSection').append(this.responseText);
-
-      clearButtons();
-
-      setButton('resume_button');
-    }
-  };
-  xhttp.open("GET", "/resume", true);
-  xhttp.send();
-
-
 }
 
 function clearButtons()
@@ -61,19 +42,6 @@ function clearButtons()
       x[i].classList.remove("NavButtonS");
       x[i].classList.add("NavButton");
   }
-}
-
-function setElementToFile(elementID, file)
-{
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById(elementID).innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", file, true);
-  xhttp.send();
 }
 
 function openPopup() {
