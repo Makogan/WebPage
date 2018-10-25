@@ -1,3 +1,17 @@
+body {
+    background-image: url("images/tree.jpg");
+    background-color: black;
+    background-size: 1920px 1200px;
+    background-attachment: fixed;
+    overflow: visible;
+
+    --text_color: white;
+    --button_background_color: rgba(0,0,0,0.6);
+    --text_background_color: rgba(255, 174, 0, 0.7);
+    --border_color: rgb(255, 174, 0);
+}
+
+
 .projectFrame {
     width: 502px;
     height: 260px;
