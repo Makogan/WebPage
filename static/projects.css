@@ -1,6 +1,6 @@
 .projectFrame {
-    width: 512px;
-    height: 280px;
+    width: 502px;
+    height: 260px;
     object-fit: cover;
     opacity: 1;
 }
@@ -15,13 +15,32 @@
 }
 
 .Flipper-inner {
-    transform: rotateY(80deg);
+    position: absolute;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
+#img1 {
+    display: inline-block;
+    transform: rotateY(80deg);
+}
+
 #img2 {
     display: inline-block;
-    transform: translate3d(-200px, 0px, 0px);
-    transform: rotateY(80deg);
+    transform: translate3d(20%,0px,0px) rotateY(80deg);
+}
+
+#img3 {
+    display: inline-block;
+    transform: translate3d(100%,0px,0px);
+}
+
+#img4 {
+    display: inline-block;
+    transform: translate3d(200%,0px,0px)  rotateY(-80deg);
+}
+
+#img5 {
+    display: inline-block;
+    transform: translate3d(280%,0px,0px) rotateY(-80deg);
 }

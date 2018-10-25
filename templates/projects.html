@@ -1,10 +1,15 @@
-<div class="col-1" style="height: 500px"></div>
-<div class="col-9">
-    <div class="Flipper">
-        <img src="static/images/drapes.png" class="projectFrame Flipper-inner" id="img1">
 
-        <img src="static/images/drapes.png" class="projectFrame Flipper-inner" id="img2">
-
-        <img src="static/images/drapes.png" class="projectFrame Flipper-inner" id="img3">
+<div class="col-10">
+    <div class="coverflow">
+        <div class="cover"><img src="static/images/drapes.png" class="projectFrame"></div>
+        <div class="cover"><img src="static/images/drapes.png" class="projectFrame"></div>
+        <div class="cover"><img src="static/images/drapes.png" class="projectFrame"></div>
+        <div class="cover"><img src="static/images/drapes.png" class="projectFrame"></div>
     </div>
+
+    <script>
+        $(function() {
+            $('.coverflow').coverflow();
+        });
+    </script>
 </div>
