@@ -2,13 +2,19 @@
     width: 512px;
     height: 280px;
     object-fit: cover;
+    opacity: 1;
 }
 
 .Flipper {
-    transform-style: preserve-3d;
+    margin-top: 10%;
     perspective: 1000px;
 }
 
-.Flipper:hover {
-    transform: rotateY("30deg");
+.Flipper:hover .Flipper-inner {
+    transform: rotateY(60deg);
+}
+
+.Flipper-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
