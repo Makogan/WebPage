@@ -11,10 +11,11 @@
 }
 
 .Flipper:hover .Flipper-inner {
-    transform: rotateY(60deg);
+    display: inline-block;
 }
 
 .Flipper-inner {
+    transform: rotateY(80deg);
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
