@@ -8,14 +8,20 @@
 .Flipper {
     margin-top: 10%;
     perspective: 1000px;
+    display: flex;
 }
 
 .Flipper:hover .Flipper-inner {
-    display: inline-block;
 }
 
 .Flipper-inner {
     transform: rotateY(80deg);
     transition: transform 0.8s;
     transform-style: preserve-3d;
+}
+
+#img2 {
+    display: inline-block;
+    transform: translate3d(-200px, 0px, 0px);
+    transform: rotateY(80deg);
 }
