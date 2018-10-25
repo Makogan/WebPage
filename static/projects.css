@@ -3,3 +3,12 @@
     height: 280px;
     object-fit: cover;
 }
+
+.Flipper {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.Flipper:hover {
+    transform: rotateY("30deg");
+}
