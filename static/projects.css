@@ -15,3 +15,18 @@
     opacity: 0.1;
 }
 
+.menu {
+    height: 50em;
+}
+
+#ProjDisp {
+    background-image: linear-gradient(to top,
+        black, black, rgba(0,0,0,0));
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
+#projDesc {
+    margin-top: 3%;
+}
+

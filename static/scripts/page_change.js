@@ -1,15 +1,15 @@
 window.onload = setWelcome();
 
 function setWelcome() {
-  changeToPage("/home", "welcome_button");
+  changeToPage("static/pages/home.html", "welcome_button");
 }
 
 function setResume() {
-  changeToPage("/resume", "resume_button");
+  changeToPage("static/pages/resume.html", "resume_button");
 }
 
 function setProjects() {
-  changeToPage("/projects", "projects_button");
+  changeToPage("static/pages/projects.html", "projects_button");
 }
 
 function changeToPage(page, button) {

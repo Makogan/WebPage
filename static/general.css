@@ -9,7 +9,7 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -38,6 +38,7 @@ body {
     --button_background_color: rgba(0,0,0,0.6);
     --text_background_color: rgba(255, 174, 0, 0.7);
     --border_color: rgb(255, 174, 0);
+    --back_color: rgba(30,30,30,0.95);
 }
 
 button {
@@ -48,7 +49,7 @@ button {
 
 .FText {
     padding: 1%;
-    background-color: rgba(30,30,30,0.95);
+    background-color: var(--back_color);
     border-radius: 0;
     color: var(--text_color);
 }
