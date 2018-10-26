@@ -1,48 +1,48 @@
 
-<div class="col-10">
-    <div class="coverflow">
-        <div class="cover"><img src="static/images/drapes.png" class="projectFrame"></div>
-        <div class="cover"><img src="static/images/drapes.png" class="projectFrame"></div>
-        <div class="cover"><img src="static/images/drapes.png" class="projectFrame"></div>
-        <div class="cover"><img src="static/images/drapes.png" class="projectFrame"></div>
-    </div>
 
-    <script>
+<script>
         $(function() {
             $('.coverflow').coverflow();
-        });
-    </script>
 
-    <script>
-        $(function() {
             if ($.fn.reflect) {
-                $('#preview-coverflow .cover').reflect();	// only possible in very specific situations
+                $('.projects .cover').reflect();
             }
 
-            $('#preview-coverflow').coverflow({
-                index:			6,
-                density:		2,
-                innerOffset:	50,
-                innerScale:		.7,
-                animateStep:	function(event, cover, offset, isVisible, isMiddle, sin, cos) {
-                    if (isVisible) {
-                        if (isMiddle) {
-                            $(cover).css({
-                                'filter':			'none',
-                                '-webkit-filter':	'none'
-                            });
-                        } else {
-                            var brightness	= 1 + Math.abs(sin),
-                                contrast	= 1 - Math.abs(sin),
-                                filter		= 'contrast('+contrast+') brightness('+brightness+')';
-                            $(cover).css({
-                                'filter':			filter,
-                                '-webkit-filter':	filter
-                            });
-                        }
-                    }
-                }
+            $('.projects').coverflow({
+                duration:		1000,
+                index:			3,
+                width:			320,
+                height:			240,
+                visible:		'density',
+
+                selectedCss:	{	opacity: 1	},
+                outerCss:		{	opacity: .1	},
+
+                before:			function() {
+                    $('#photos-name').stop(true).fadeOut('fast');
+                },
             });
+    
         });
     </script>
+
+
+
+<div class="col-10" style="height: 400px">
+    <div class="projects" autofocus>
+        <img class="cover" data-name="Attic" src="static/demo/attic.jpg"/>
+        <img class="cover" data-name="Aurora Borealis" src="static/demo/aurora.jpg"/>
+        <img class="cover" data-name="Barbecued steak" src="static/demo/barbecue.jpg"/>
+        <img class="cover" data-name="Black swan" src="static/demo/blackswan.jpg"/>
+        <img class="cover" data-name="Chess" src="static/demo/chess.jpg"/>
+        <img class="cover" data-name="Fire" src="static/demo/fire.jpg"/>
+        <img class="cover" data-name="Keyboard" src="static/demo/keyboard.jpg"/>
+        <img class="cover" data-name="Locomotive" src="static/demo/locomotive.jpg"/>
+        <img class="cover" data-name="Novo-Diveevo monastery" src="static/demo/diveevo.jpg"/>
+        <img class="cover" data-name="Person" src="static/demo/person.jpg"/>
+        <img class="cover" data-name="Rose" src="static/demo/rose.jpg"/>
+        <img class="cover" data-name="Seagull" src="static/demo/seagull.jpg"/>
+        <img class="cover" data-name="Solar power" src="static/demo/solarpower.jpg"/>
+    </div>
 </div>
+
