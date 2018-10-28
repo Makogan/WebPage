@@ -1,19 +1,26 @@
-<nav id="PageNav">
-    <div id="TimeContainer">
-        <ul id="TimeList">
-            <li>
-                <button id="welcome_button" onclick="setWelcome()">
-                    <span>Home<span></span>
-                </button>
-            </li>
+<div class="fixed col-1 menu" style="margin-top: 5%">
+    <ul>
+        <li>
+            <button id="welcome_button" onclick="setWelcome()" class="NavButton">
+                <span>Home<span></span>
+            </button>
+        </li>
+        <li>
+            <button id="resume_button" onclick="setResume()" class="NavButton">
+                <span>Resume<span>
+            </button></li>
+        </li>
 
-            <li>
-                <button id="resume_button" onclick="setResume()">
-                    <span>Resume<span>
-                </button></li>
-        </ul>
-    </div>
+        <li>
+            <button id="projects_button" onclick="setProjects()" class="NavButton">
+                <span>Projects<span>
+            </button></li>
+        </li>
 
-    <script src="static/scripts/page_change.js"></script>
-
-</nav>
+        <li>
+            <button id="gallery_button" onclick="setGallery()" class="NavButton">
+                <span>Gallery<span>
+            </button></li>
+        </li>
+    </ul>
+</div>

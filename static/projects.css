@@ -1,0 +1,62 @@
+@font-face {
+    font-family: Coves;
+    src: url("fonts/Coves-Light.otf");
+}
+
+.projects {
+    duration:		1000;
+    index:			3;
+    width:			320;
+    height:			240;
+
+}
+
+.projects .selectedCss {
+    opacity: 1;
+}
+
+.projects .outerCss {
+    opacity: 0.1;
+}
+
+.cover {
+    height: 240px;
+    width: 320px;
+}
+
+.menu {
+    height: 50em;
+}
+
+#ProjDisp {
+    background-image: linear-gradient(to top,
+        black, black, rgba(0,0,0,0));
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
+#projDesc {
+    margin-top: 3%;
+}
+
+#photos-info {
+    position:		relative;
+    text-align:		center;
+    z-index:		1000;
+    text-shadow:	0 0 8px white;
+}
+
+#photos-name {
+    font-size: 300%;
+    font-weight: bold;
+    font-family: Coves;
+}
+
+.frame {
+    text-align: center; margin: 2.5%;
+}
+
+.description {
+    font-size: 22px;
+    padding: 2.5%;
+}

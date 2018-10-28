@@ -1,0 +1,105 @@
+#Avatar {
+    border-radius: 50%;
+    max-width: 400px;
+}
+
+#Name {
+    font-size: 80px;
+    vertical-align: top;
+}
+
+#ButtonContainer {
+    display: flex;
+    flex-direction: row;
+    color: var(--text_color);
+    align-items: center;
+}
+
+.p {
+    background-color: var(--text_background_color);
+    color: var(--text_color);
+    border-radius: 50px;
+}
+
+.ResHead {
+    font-size: 220%;
+    font-weight: 1000;
+}
+
+.bLink img {
+    max-width: 60px;
+    height: auto;
+}
+
+.bLink:hover {
+    transform: scale(1.10);
+}
+
+.closeButton {
+    width: 32px;
+    height: 32px;
+}
+
+ /* Popup container */
+ .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgba(10,10,10,1);
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: -400%;
+    margin-left: -45px;
+    width: 22em;
+
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 85%;
+    margin-left: -5px;
+    border-width: 28px;
+    border-style: solid;
+    border-color: transparent transparent rgba(10,10,10,1) transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+#ButtonContainer img{
+    margin-left: 10px;
+}
+
+#resDB {
+    margin-left: 20%;
+}

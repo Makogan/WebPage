@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="static/general.css"/>
+	<link rel="stylesheet" type="text/css" href="static/welcome.css"/>
+	<link rel="stylesheet" type="text/css" href="static/resume.css"/>
+	<link rel="stylesheet" type="text/css" href="static/projects.css"/>
+
+	<link rel="shortcut icon" href="static/images/avatar.ico">
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+<div class="row">
+
+	{% include  "navigation-menu.html"%}
+	<section id="VolatileSection">
+
+	</section>
+</div>
+
+<!-- jQuery/jQueryUI (hosted) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js"></script>
+
+<!-- Optional: Reflection -->
+<script type="text/javascript" src="static/bower_components/coverflow/reflection.js"></script>
+
+<!-- interpolate, depends on jQ 1.8.0+ -->
+<script src="static/bower_components/coverflow/jquery.interpolate.min.js"></script>
+
+<!-- Coverflow -->
+<script src="static/bower_components/coverflow/jquery.coverflow.js"></script>
+
+<script src="static/scripts/page_change.js"></script>
+
+</body>
+</html>
