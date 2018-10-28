@@ -1,3 +1,38 @@
-<div>
-    AAAAAAAAAAAAAAAAAAAAAA
+<div class="description">
+    A rendering engine built from scratch, as a personal project in my own time,
+    to explore and learn Voxel Global Illumination.
+    I used C++ and OpenGL to implement a set of papers on how to achieve 3D rasterization
+    with the GPU to create Voxel approximations of 3D geometry and store them in fast look up
+    data structures.
+    <br><br>
+    This achieves a voxel approximation of the underlying geometry:
+
+    <div class="frame">
+        <img src="static/images/sponza-blocks.png" style="height: 400px; width: 700px; object-fit: cover;">
+    </div>
+
+    Which works at custom levels of resolution:
+
+    <div class="frame">
+        <img src="static/images/drag1.png" style="height: 450px; width: 700px; object-fit: cover;">
+    </div>
+
+    <div class="frame">
+        <img src="static/images/drag2.png" style="height: 450px; width: 700px; object-fit: cover;">
+    </div>
+
+    Its per-pixel efficiency can be improved with better data structures. In the following
+    image a grey scale is used to visualize the per pixel iterations done by the GPU (white
+    represents 100 iterations, black 0 iterations)
+
+    <div class="frame">
+        <img src="static/images/drag3.png" style="height: 450px; width: 700px; object-fit: cover;">
+    </div>
+
+    Which allows for real time rendering of illumination effects, such as soft shadows,
+    by allowing for efficient data searches for collision detection.
+
+    <div class="frame">
+        <img src="static/images/sponza-big.png" style="height: 450px; width: 700px; object-fit: cover;">
+    </div>
 </div>

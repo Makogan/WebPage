@@ -6,10 +6,15 @@ function setWelcome() {
 
 function setResume() {
   changeToPage("static/pages/resume.html", "resume_button");
+  $('projects_button').classList.add('NavButtonS');
 }
 
 function setProjects() {
   changeToPage("static/pages/projects.html", "projects_button");
+}
+
+function setGallery() {
+  changeToPage("static/pages/gallery.html", "gallery_button");
 }
 
 function changeToPage(page, button) {

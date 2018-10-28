@@ -1,5 +1,6 @@
 var pDir = "static/pages/projects/";
-var projects = ["vgi", "mre", "pios"];
+var projects = ["vgi", "mass-springs", "ray-tracer", "mre", "haptics", "vWorld", "pios",
+    "boids", "orrery"];
 
 $(function() {
     $('.coverflow').coverflow();
@@ -10,7 +11,7 @@ $(function() {
 
     $('.projects').coverflow({
         duration:		1000,
-        index:			3,
+        index:			0,
         width:			320,
         height:			240,
 
@@ -24,6 +25,9 @@ $(function() {
         select:			function(event, cover) {
             var pIndex = $(cover).index();
             setDesc(pDir + projects[pIndex] + ".html");
+            
+            var img = $(cover).children().andSelf().filter('img').last();
+			$('#photos-name').text(img.data('name') || 'unknown').stop(true).fadeIn('fast');
         },
     });
 });
@@ -35,10 +39,6 @@ function setDesc(page)
       if (this.readyState == 4 && this.status == 200) {
         $('#projDesc').empty();
         $('#projDesc').append(this.responseText);
-
-        clearButtons();
-
-        setButton(button);
       }
     };
     xhttp.open("GET", page, true);
